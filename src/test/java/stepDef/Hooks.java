@@ -2,6 +2,8 @@ package stepDef;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
