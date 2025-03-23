@@ -1,84 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-22T01:07:10 IST" name="Suite" finished-at="2025-03-22T01:07:40 IST" duration-ms="29860">
+  <suite started-at="2025-03-23T21:24:23 IST" name="Default suite" finished-at="2025-03-23T21:25:16 IST" duration-ms="53042">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@550ee7e5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-03-22T01:07:10 IST" name="Test" finished-at="2025-03-22T01:07:40 IST" duration-ms="29860">
-      <class name="runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestNGRunner@550ee7e5]" started-at="2025-03-22T01:07:26 IST" name="setUpClass" finished-at="2025-03-22T01:07:26 IST" duration-ms="158" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@3206174f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@550ee7e5]" started-at="2025-03-22T01:07:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-22T01:07:33 IST" duration-ms="6797" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User Login with valid and invalid credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Demo Web Shop Login"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@550ee7e5]" started-at="2025-03-22T01:07:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-22T01:07:40 IST" duration-ms="6347" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User Login with valid and invalid credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Demo Web Shop Login"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestNGRunner@550ee7e5]" started-at="2025-03-22T01:07:40 IST" name="tearDownClass" finished-at="2025-03-22T01:07:40 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.TestNGRunner -->
-      <class name="testcases.RegistrationTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testcases.RegistrationTest@2cd2a21f]" started-at="2025-03-22T01:07:10 IST" name="setUp" finished-at="2025-03-22T01:07:16 IST" duration-ms="6167" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-03-23T21:24:23 IST" name="Default test" finished-at="2025-03-23T21:25:16 IST" duration-ms="53042">
+      <class name="testcases.AddMultipleProductsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AddMultipleProductsTest@609db43b]" started-at="2025-03-23T21:24:23 IST" name="setUp" finished-at="2025-03-23T21:24:33 IST" duration-ms="9731" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="registerUser()[pri:0, instance:testcases.RegistrationTest@2cd2a21f]" started-at="2025-03-22T01:07:16 IST" name="registerUser" finished-at="2025-03-22T01:07:23 IST" duration-ms="7220" status="PASS">
+        <test-method signature="testAddingMultipleProducts()[pri:0, instance:testcases.AddMultipleProductsTest@609db43b]" started-at="2025-03-23T21:24:33 IST" name="testAddingMultipleProducts" finished-at="2025-03-23T21:25:12 IST" duration-ms="39577" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerUser -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.RegistrationTest@2cd2a21f]" started-at="2025-03-22T01:07:23 IST" name="tearDown" finished-at="2025-03-22T01:07:26 IST" duration-ms="3125" status="PASS">
+        </test-method> <!-- testAddingMultipleProducts -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.AddMultipleProductsTest@609db43b]" started-at="2025-03-23T21:25:12 IST" name="teardown" finished-at="2025-03-23T21:25:16 IST" duration-ms="3672" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testcases.RegistrationTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- teardown -->
+      </class> <!-- testcases.AddMultipleProductsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -11,6 +11,7 @@ public class LoginPage {
     By passwordField = By.id("Password");
     By loginButton = By.xpath("//input[@value='Log in']");
     By errorMessage = By.xpath("//div[contains(@class, 'message-error')]"); // Error message locator
+    By logoutLink = By.linkText("Log out");
 
     // Method to perform login using credentials from data.properties
     public void login() throws InterruptedException {
@@ -34,5 +35,10 @@ public class LoginPage {
         } catch (Exception e) {
             return false; // No error message means login was successful
         }
+    }
+    
+    // Method to perform logout
+    public void logout() {
+        BaseClass.driver.findElement(logoutLink).click();
     }
 }

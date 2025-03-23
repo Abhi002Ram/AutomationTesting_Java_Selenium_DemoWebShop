@@ -27,7 +27,6 @@ public class ProductSearchTest extends BaseClass {
         ExtentReport.createTest("Product Search Test"); // Create test entry
         ExtentReport.log(Status.INFO, "Starting Product Search Test");
         
-        readData(); // Load config.properties
         invokeBrowser(); // Launch browser
         driver.get(prop.getProperty("url")); // Navigate to homepage
 
