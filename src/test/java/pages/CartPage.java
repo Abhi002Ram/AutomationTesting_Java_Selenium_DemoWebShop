@@ -29,5 +29,15 @@ public class CartPage {
         }
         return false; // Product not found in the cart
     }
+    
+    // Check if the cart is empty
+    public boolean isCartEmpty() {
+        // Check if products exist in the cart table
+        if (BaseClass.driver.findElements(By.xpath("//table[@class='cart']//tbody/tr")).size() > 0) {
+            return false; // Cart has items
+        }
+        // Check for "Your Shopping Cart is empty!" message
+        return BaseClass.driver.findElements(By.xpath("//div[contains(text(),'Your Shopping Cart is empty!')]")).size() > 0;
+    }
 
 }
