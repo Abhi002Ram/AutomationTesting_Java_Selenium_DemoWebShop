@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import io.qameta.allure.*;
 
 import base.BaseClass;
 import pages.CartPage;
@@ -14,6 +15,8 @@ import pages.CheckoutPage;
 import pages.HomePage;
 import pages.LoginPage;
 
+@Epic("DemoWebShop Checkout")  
+@Feature("Order Placement")   
 public class CheckoutTest extends BaseClass {
     HomePage homePage;
     LoginPage loginPage;
@@ -21,6 +24,7 @@ public class CheckoutTest extends BaseClass {
     CheckoutPage checkoutPage;
 
     @BeforeMethod
+    @Step("Setup browser and navigate to checkout page")
     public void setUp() throws Exception {
         invokeBrowser(); // Launch browser
         driver.get(prop.getProperty("url")); // Navigate to homepage
@@ -32,7 +36,10 @@ public class CheckoutTest extends BaseClass {
         checkoutPage = new CheckoutPage();
     }
 
-    @Test
+    @Test(description = "Verify checkout functionality")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("User completes a successful checkout")
+    @Description("This test case verifies the checkout process including login, navigating to cart, and confirming order")
     public void testCheckout() throws InterruptedException, IOException {
         // Step 1: Login
         homePage.navigateToLogin();
@@ -85,6 +92,7 @@ public class CheckoutTest extends BaseClass {
     }
 
     @AfterMethod
+    @Step("Close browser after test execution")
     public void teardown() throws InterruptedException {
         closeBrowser();
     }

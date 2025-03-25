@@ -5,7 +5,11 @@
   <parameter name="browser" value="firefox"/>
     <classes>
       <class name="testcases.RegistrationTest"/>
+      <class name="testcases.LoginTest"/>
       <class name="runner.TestNGRunner"/>
+      <class name="testcases.ProductSearchTest"/>
+      <class name="testcases.AddMultipleProductsTest"/>
+      <class name="testcases.CheckoutTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

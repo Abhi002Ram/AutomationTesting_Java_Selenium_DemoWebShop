@@ -1,7 +1,12 @@
 package stepDef;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -10,6 +15,7 @@ import io.cucumber.java.en.When;
 
 public class LoginSteps {
 	WebDriver driver = Hooks.driver;
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	
     @Given("Browser is open")
     public void browser_is_open() {
@@ -23,18 +29,21 @@ public class LoginSteps {
 
     @And("User is on the login page")
     public void user_is_on_the_login_page() {
-        driver.findElement(By.linkText("Log in")).click();
+    	wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Log in"))).click();
     }
 
     @When("User enters {string} and {string}")
     public void user_enters_credentials(String username, String password) {
-        driver.findElement(By.id("Email")).sendKeys(username);
-        driver.findElement(By.id("Password")).sendKeys(password);
+    	WebElement emailField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Email")));
+        emailField.sendKeys(username);
+
+        WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Password")));
+        passwordField.sendKeys(password);
     }
 
     @And("Clicks on the login button")
     public void clicks_on_the_login_button() {
-        driver.findElement(By.xpath("//input[@value='Log in']")).click();
+    	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Log in']"))).click();
     }
 
     @Then("User should see appropriate message")
