@@ -1,4 +1,4 @@
-# Wipro_CapstoneProject_DemoWebShop
+# Automation Testing using Java Selenium - DemoWebShop
 #### Automation testing of a website (Demo Web Shop: https://demowebshop.tricentis.com/)
 
 ### Introduction
